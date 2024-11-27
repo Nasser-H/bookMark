@@ -1,0 +1,35 @@
+@media screen and (max-width: 1300px) {
+  #lightBox {
+    width: 45%;
+  }
+}
+@media screen and (max-width: 1197px) {
+  #lightBox {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 930px) {
+  #lightBox {
+    width: 65%;
+  }
+}
+@media screen and (max-width: 760px) {
+  #lightBox {
+    width: 75%;
+  }
+}
+@media screen and (max-width: 657px) {
+  #lightBox {
+    width: 75%;
+  }
+}
+@media screen and (max-width: 370px) {
+  #lightBox {
+    width: 85%;
+  }
+}
+@media screen and (max-width: 250px) {
+  #lightBox {
+    width: 95%;
+  }
+}

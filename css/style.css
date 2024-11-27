@@ -1,0 +1,157 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+/* fonts */
+@font-face {
+  font-family: "Pacifico";
+  src: url(../fonts/Pacifico-Regular.ttf);
+}
+@font-face {
+  font-family: "Righteous";
+  src: url(../fonts/Righteous-Regular.ttf);
+}
+@font-face {
+  font-family: "PT Sans Caption";
+  src: url(../fonts/PTSansCaption-Regular.ttf);
+}
+@font-face {
+  font-family: "Bree Serif";
+  src: url(../fonts/BreeSerif-Regular.ttf);
+}
+/* variables */
+:root {
+  --header_font: "Pacifico";
+  --section-header-font: "Righteous";
+  --table-font: "PT Sans Caption";
+  --light-box-font: "Bree Serif";
+  --bg-main: #f7ecde;
+}
+body {
+  background-color: var(--bg-main);
+}
+
+header h1 {
+  font-family: var(--header_font);
+  font-size: 50px;
+  position: relative;
+  isolation: isolate;
+}
+header h1::after {
+  content: "";
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  top: 60%;
+  background-color: #fec260;
+  z-index: -1;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+header h1:hover::after {
+  top: 37%;
+}
+section .container .row {
+  border: 2px dotted black;
+  border-left: 0;
+  border-right: 0;
+}
+section h2 {
+  font-family: var(--section-header-font);
+  font-size: 25px;
+  background: rgb(62, 165, 92);
+  background: -webkit-gradient(
+    linear,
+    left top, right top,
+    color-stop(20%, rgba(62, 165, 92, 1)),
+    color-stop(79%, rgba(179, 172, 73, 1))
+  );
+  background: -o-linear-gradient(
+    left,
+    rgba(62, 165, 92, 1) 20%,
+    rgba(179, 172, 73, 1) 79%
+  );
+  background: linear-gradient(
+    90deg,
+    rgba(62, 165, 92, 1) 20%,
+    rgba(179, 172, 73, 1) 79%
+  );
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+}
+.form-control:focus {
+  color: #212529;
+  background-color: #fff;
+  border-color: #d99c39;
+  outline: 0;
+  -webkit-box-shadow: 0 0 0 0.25rem #fec26055;
+          box-shadow: 0 0 0 0.25rem #fec26055;
+}
+.btn-submit {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: #d1512d;
+  --bs-btn-border-color: #d1512d;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #bb4120;
+  --bs-btn-hover-border-color: #a03315;
+}
+.btn-visit {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: #9eb23b;
+  --bs-btn-border-color: #9eb23b;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #8a9e23;
+  --bs-btn-hover-border-color: #6e8018;
+}
+.btn-delete {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: #eb1d36;
+  --bs-btn-border-color: #eb1d36;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #d30820;
+  --bs-btn-hover-border-color: #ba081d;
+}
+footer table {
+  font-family: var(--table-font);
+}
+#lightBoxContainer {
+  background-color: #21252975;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+#lightBox {
+  width: 40%;
+  font-weight: 200;
+  padding: 24px;
+  font-family: var(--light-box-font);
+  font-size: 21px;
+  background-color: white;
+}
+#lightBox .caption ul li:nth-child(1) {
+  background-color: #f15f5d;
+}
+#lightBox .caption ul li:nth-child(2) {
+  background-color: #febe2e;
+}
+#lightBox .caption ul li:nth-child(3) {
+  background-color: #4db748;
+}
+#lightBox .caption ul li {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #9eb23b;
+}
+#lightBox .caption i {
+  font-size: 30px;
+  cursor: pointer;
+}

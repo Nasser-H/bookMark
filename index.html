@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmark</title>
+    <!-- icons -->
+    <link rel="icon" href="img/bookmark.png" type="image/x-icon">
+    <!-- css files -->
+    <link rel="stylesheet" href="css/fontAwesome.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
+</head>
+
+<body>
+    <main>
+        <header>
+            <div class="container">
+                <div class="row py-5">
+                    <div class="col-md-12 d-flex justify-content-center">
+                        <h1 class="py-2">Bookmarker</h1>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <section>
+            <div class="container">
+                <div class="row pt-3">
+                    <div class="col-md-12">
+                        <figure class="d-flex justify-content-center">
+                            <h2><i class="fa-solid fa-bookmark"></i> Bookmark your favorite sites <i
+                                    class="fa-solid fa-bookmark"></i>
+                            </h2>
+                        </figure>
+                        <figure>
+                            <label for="inputPassword5" class="form-label fw-bolder pt-4"><i
+                                    class="fa-solid fa-book-bookmark pe-2"></i> Site Name</label>
+                            <input type="text" id="inputName" oninput="validation(this)" class="form-control"
+                                aria-describedby="passwordHelpBlock" placeholder="Bookmark Name">
+                            <label for="inputPassword5" class="form-label fw-bolder pt-4"><i
+                                    class="fa-solid fa-link"></i>
+                                Site
+                                URL</label>
+                            <input type="text" id="inputURL" oninput="validation(this)" class="form-control"
+                                aria-describedby="passwordHelpBlock" placeholder="Website URL">
+
+                        </figure>
+                        <figure class="d-flex justify-content-center p-2">
+                            <button id="btnSubmit" type="button" onclick="addBookMark();"
+                                class="btn btn-submit px-5">Submit</button>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <section id="lightBoxContainer" class="d-none justify-content-center align-items-center">
+            <div id="lightBox" class="rounded-2">
+                <div class="caption d-flex justify-content-between">
+                    <ul class="list-unstyled d-flex column-gap-2 pb-4 pt-3">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                    <i id="lightBoxClose" class="fa-solid fa-xmark pt-2 pe-2"></i>
+                </div>
+                Site Name or Url is not valid, Please follow the rules below :
+                <ul class="pt-3">
+                    <li class="pb-3">Site name must contain at least 3 characters</li>
+                    <li>Site URL must be a valid one</li>
+                </ul>
+            </div>
+        </section>
+        <footer class="pt-4 mb-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <table class="table text-center align-middle">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Index</th>
+                                    <th scope="col">Website Name</th>
+                                    <th scope="col">Visit</th>
+                                    <th scope="col">Delete</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tableContent">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </main>
+    <!-- js files -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
